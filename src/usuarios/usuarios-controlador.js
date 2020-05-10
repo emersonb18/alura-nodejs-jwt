@@ -10,9 +10,7 @@ module.exports = {
         nome,
         email
       });
-      console.log("aqui")
       await usuario.adicionaSenha(senha)
-      console.log("aqui2")
       await usuario.adiciona();
 
       res.status(201).json();
@@ -26,6 +24,10 @@ module.exports = {
         res.status(500).json({ erro: erro.message });
       }
     }
+  },
+
+  login: (req, res) => {
+    res.status(204).send()
   },
 
   lista: async (req, res) => {
